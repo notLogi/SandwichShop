@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class SandwichShop {
     public static void main(String[] args) {
         double price;
-        double discount = 0;
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Regular(1) or large(2)?");
         int option = myScanner.nextInt();
@@ -21,6 +20,7 @@ public class SandwichShop {
         }
         System.out.println("Enter your age: ");
         int age = myScanner.nextInt();
+        double discount = 0;
         if(age <= 17){
             discount = 0.10;
         }
