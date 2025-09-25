@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SandwichShop {
     public static void main(String[] args) {
-        double price = 0;
+        double price;
         double discount = 0;
         Scanner myScanner = new Scanner(System.in);
         System.out.println("Regular(1) or large(2)?");
@@ -14,6 +14,10 @@ public class SandwichShop {
         }
         else if(option == 2){
             price = 8.95;
+        }
+        else{
+            System.out.println("Invalid option");
+            return;
         }
         System.out.println("Enter your age: ");
         int age = myScanner.nextInt();
@@ -25,5 +29,7 @@ public class SandwichShop {
         }
         double costOfSandwich = price - (price * discount);
         System.out.printf("Your total cost is: $%.2f", costOfSandwich);
+
+        myScanner.close();
     }
 }
